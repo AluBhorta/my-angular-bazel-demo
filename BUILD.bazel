@@ -1,0 +1,14 @@
+package(default_visibility = ["//visibility:public"])
+
+# This export allows targets in other packages to reference files that live
+# in this package.
+
+
+# alias(
+#     name = "tsconfig.json",
+#     actual = "//src:tsconfig.json",
+# )
+
+
+exports_files(["tsconfig.json"])
+

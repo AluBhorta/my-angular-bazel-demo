@@ -1,0 +1,26 @@
+load("@npm_angular_bazel//:index.bzl", "ng_module")
+
+package(default_visibility = ["//:__subpackages__"])
+
+
+ng_module(
+    name = "app",
+    srcs = [
+        "app.component.ts",
+        "app.module.ts"
+    ],
+    assets = [
+        "app.component.html",
+        "app.component.css"
+    ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "//src/app/module-a",
+        "//src/app/module-b",
+        "@npm//@angular/common",
+        "@npm//@angular/core",
+        "@npm//@angular/router",
+        "@npm//@angular/forms",
+        "@npm//@angular/platform-browser",
+    ],
+)
